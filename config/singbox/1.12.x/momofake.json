@@ -2,7 +2,7 @@
   "dns": {
     "servers": [
       {"tag": "local", "type": "udp", "server": "192.168.9.2"},
-      {"tag": "public", "type": "https", "server": "192.168.9.2", "domain_resolver": "local"},
+      {"tag": "public", "type": "https", "server": "dot.pub", "domain_resolver": "local"},
       {"tag": "foreign", "type": "https", "server": "192.168.9.2", "detour": "🚀 Proxy"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
