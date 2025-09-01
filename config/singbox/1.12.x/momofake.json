@@ -13,7 +13,7 @@
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
-    "final": "foreign",
+    "final": "local",
     "strategy": "ipv4_only",
     "independent_cache": true,
     "reverse_mapping": true
@@ -91,7 +91,7 @@
       {"tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/qljsyph/ruleset-icon/raw/refs/heads/main/sing-box/geoip/China-ASN-combined-ip.srs", "download_detour": "🎯 全球直连"}
     ],
     "final": "🚀 Proxy",
-    "default_domain_resolver": {"server": "foreign"}
+    "default_domain_resolver": {"server": "local"}
   },
   "inbounds": [
     {
