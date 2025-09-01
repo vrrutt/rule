@@ -1,9 +1,9 @@
 {
   "dns": {
     "servers": [
-      {"tag": "local", "type": "udp", "server": "192.168.9.2"},
+      {"tag": "local", "type": "udp", "server": "119.29.29.29"},
       {"tag": "public", "type": "https", "server": "dot.pub", "domain_resolver": "local"},
-      {"tag": "foreign", "type": "https", "server": "192.168.9.2", "detour": "🚀 Proxy"},
+      {"tag": "foreign", "type": "https", "server": "8.8.8.8", "detour": "🚀 Proxy"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
     "rules": [
@@ -14,7 +14,7 @@
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
-    "strategy": "ipv4_only",
+    "strategy": "prefer_ipv4",
     "independent_cache": true,
     "reverse_mapping": true
   },
