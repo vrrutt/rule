@@ -1,9 +1,9 @@
 {
   "dns": {
     "servers": [
-      {"tag": "local", "type": "udp", "server": "192.168.9.2:53"},
-      {"tag": "public", "type": "https", "server": "192.168.9.2:53"},
-      {"tag": "foreign", "type": "https", "server": "192.168.9.2:53", "detour": "🚀 Proxy"},
+      {"tag": "local", "type": "udp", "server": "192.168.9.2"},
+      {"tag": "public", "type": "https", "server": "dot.pub", "domain_resolver": "local"},
+      {"tag": "foreign", "type": "https", "server": "192.168.9.2", "detour": "🚀 Proxy"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
     "rules": [
@@ -91,7 +91,7 @@
       {"tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/qljsyph/ruleset-icon/raw/refs/heads/main/sing-box/geoip/China-ASN-combined-ip.srs", "download_detour": "🎯 全球直连"}
     ],
     "final": "🚀 Proxy",
-    "default_domain_resolver": {"server": "public"}
+    "default_domain_resolver": {"server": "foreign"}
   },
   "inbounds": [
     {
