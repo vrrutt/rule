@@ -97,12 +97,6 @@
   },
   "inbounds": [
     {
-      "tag": "dns-in",
-      "type": "direct",
-      "listen": "::",
-      "listen_port": 1053
-    },
-    {
       "tag": "tun-in",
       "type": "tun",
       "address": [
